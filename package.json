@@ -1,0 +1,63 @@
+{
+	"name": "@brekhov-ilya/pachca-mcp",
+	"version": "0.1.0",
+	"description": "MCP-сервер для работы с API Pachca через @pachca/sdk",
+	"type": "module",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"import": "./dist/index.js"
+		}
+	},
+	"bin": {
+		"pachca-mcp": "dist/index.js"
+	},
+	"files": [
+		"dist",
+		"README.md",
+		"LICENSE"
+	],
+	"engines": {
+		"node": ">=20"
+	},
+	"scripts": {
+		"build": "tsc && chmod +x dist/index.js",
+		"dev": "tsx src/index.ts",
+		"start": "node dist/index.js",
+		"typecheck": "tsc --noEmit",
+		"prepublishOnly": "yarn build",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [
+		"mcp",
+		"model-context-protocol",
+		"pachca",
+		"claude",
+		"claude-code",
+		"codex",
+		"chatops"
+	],
+	"author": "Ilya Brekhov",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/brekhov-ilya/pachca-mcp.git"
+	},
+	"bugs": {
+		"url": "https://github.com/brekhov-ilya/pachca-mcp/issues"
+	},
+	"homepage": "https://github.com/brekhov-ilya/pachca-mcp#readme",
+	"devDependencies": {
+		"@types/node": "^25.6.0",
+		"tsx": "^4.21.0",
+		"typescript": "^6.0.3"
+	},
+	"dependencies": {
+		"@cfworker/json-schema": "^4.1.1",
+		"@modelcontextprotocol/server": "^2.0.0-alpha.2",
+		"@pachca/sdk": "^1.0.15",
+		"zod": "^4.4.3"
+	}
+}

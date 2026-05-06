@@ -1,0 +1,11 @@
+{
+	"mcpServers": {
+		"pachca": {
+			"command": "npx",
+			"args": ["-y", "@brekhov-i/pachca-mcp"],
+			"env": {
+				"TOKEN": "<your-pachca-bot-token>"
+			}
+		}
+	}
+}
